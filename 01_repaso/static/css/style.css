@@ -5,9 +5,36 @@
     font-family: Arial, sans-serif;
 }
 
+.container{
+    background-color: black;
+    margin: 40px;
+    padding: 30px;
+}
+
 header{
     display: flex;
     justify-content: center;
     background-color: rgb(113, 0, 206);
+    color: white;
 }
 
+.caja-cian{
+    background-color: aqua;
+    margin-left: 400px;
+    padding: 20px;
+    display: flex;
+    padding-right: 10px;
+padding-left: 150px;
+margin-top: 20px;
+}
+
+.targetas {
+background-color: #000;
+margin: 15px;
+padding: 70px;
+}
+
+nav{
+    background-color: blue;
+    padding: 15px;
+}
