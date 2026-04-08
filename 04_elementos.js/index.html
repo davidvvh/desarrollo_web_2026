@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica de JavaScript: Uso de THIS</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            background-color: #0080ff;
+        }
+
+        section {
+            border: 1px solid #002d4d;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+
+        .exito {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Guía Práctica: Manipulación del DOM con 'this'</h1>
+
+    <section id="ejercicio1">
+        <h2>1. Uso básico (onfocus / onblur)</h2>
+        <p>Haz clic en el campo o en el botón para ver el efecto.</p>
+        <input type="text" placeholder="Escribe tu nombre" onfocus="resaltar(this)" onblur="normal(this)">
+
+        <button onclick="resaltar(this)">Resaltar este botón</button>
+    </section>
+
+    <section id="ejercicio2">
+        <h2>2. Validación de Formulario</h2>
+        <form onsubmit="return validarFormulario(this)">
+            <label>Correo electrónico:</label><br>
+            <input type="email" name="correo"><br><br>
+            <button type="submit">Enviar</button>
+        </form>
+        <p id="mensaje"></p>
+    </section>
+
+    <section id="ejercicio3">
+        <h2>Desafío: Registro de Usuario</h2>
+        <form onsubmit="return validarDesafio(this)">
+            <input type="text" name="nombre" placeholder="Nombre" onclick="cambiarBorde(this)">
+
+            <br><br>
+
+            <input type="number" name="edad" placeholder="Edad" onclick="cambiarBorde(this)">
+
+            <br><br>
+
+            <button type="submit">Registrar</button>
+        </form>
+        <p id="mensajeDesafio"></p>
+    </section>
+
+    <script src="static/js/script.js"></script>
+</body>
+
+</html>
